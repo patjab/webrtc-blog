@@ -44,7 +44,7 @@ connection.createOffer(offer => {
 ```
 
 ```
-connection.setRemoteDescription(new RTCSessionDescription( ));
+connection.setRemoteDescription(new RTCSessionDescription());
 connection.addIceCandidate();
 ```
 ```
@@ -54,6 +54,6 @@ connection.createAnswer(answer => {
 }, console.log);
 ```
 ```
-connection.setRemoteDescription(new RTCSessionDescription( ));
+connection.setRemoteDescription(new RTCSessionDescription());
 connection.addIceCandidate();
 ```
