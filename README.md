@@ -1,6 +1,7 @@
 # Minimal WebRTC Messaging 
+This markdown document lists the three parts needed for creating an RTCDataChannel: setting up the listeners, creating and receiving the offer, creating and receiving the answer.
+
 ### Setting Up
-We want to setup:
  - RTCPeerConnection
  - ICECandidate listener
  - DataChannel listener
