@@ -5,14 +5,6 @@ We want to setup:
  - ICECandidate listener
  - DataChannel listener
 
-### The Offer
- - Recording it locally
- - Recording it remotely
-
-### The Answer
- - Recording it locally
- - Recording it remotely
-
 ```
 connection = new RTCPeerConnection({"iceServers": [{"url":"stun:stun.1.google.com:19302"}]});
 
@@ -35,6 +27,9 @@ connection.ondatachannel = (e) => {
 dataChannel = connection.createDataChannel('myDataChannel', { reliable: true });
 ```
 
+### The Offer
+ - Recording it locally
+ - Recording it remotely
 
 ```
 connection.createOffer(offer => {
@@ -42,6 +37,10 @@ connection.createOffer(offer => {
 	connection.setLocalDescription(offer);
 }, console.log);
 ```
+
+### The Answer
+ - Recording it locally
+ - Recording it remotely
 
 ```
 connection.setRemoteDescription(new RTCSessionDescription());
