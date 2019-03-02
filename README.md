@@ -18,27 +18,19 @@ connection = new RTCPeerConnection({"iceServers": [{"url":"stun:stun.1.google.co
 
 connection.onicecandidate = (e) => {
 	if (e.candidate) {
- 
 		console.log('adding', JSON.stringify(e.candidate));
-
 		connection.addIceCandidate(e.candidate);
 	}
-
 };
 
 eDataChannel = undefined;
 
 connection.ondatachannel = (e) => {
-	
 	if (e.channel) {
-		
 		console.log('found data channel');
-		
 		e.channel.onmessage = (e) => console.log(e.data);
-
 	}
 }
-
 
 dataChannel = connection.createDataChannel('myDataChannel', { reliable: true });
 ```
