@@ -13,6 +13,7 @@ THE ANSWER
  - Recording it locally
  - Recording it remotely
 
+```
 connection = new RTCPeerConnection({"iceServers": [{"url":"stun:stun.1.google.com:19302"}]});
 
 connection.onicecandidate = (e) => {
@@ -40,25 +41,27 @@ connection.ondatachannel = (e) => {
 
 
 dataChannel = connection.createDataChannel('myDataChannel', { reliable: true });
+```
 
 
-
-
+```
 connection.createOffer(offer => {
 	console.log(JSON.stringify(offer));
 	connection.setLocalDescription(offer);
 }, console.log);
+```
 
-
+```
 connection.setRemoteDescription(new RTCSessionDescription( ));
 connection.addIceCandidate();
-
-
+```
+```
 connection.createAnswer(answer => {
 	console.log(JSON.stringify(answer));
 	connection.setLocalDescription(answer);
 }, console.log);
-
-
+```
+```
 connection.setRemoteDescription(new RTCSessionDescription( ));
 connection.addIceCandidate();
+```
