@@ -38,14 +38,15 @@ connection.createOffer(offer => {
 }, console.log);
 ```
 
-### The Answer
- - Recording it locally
- - Recording it remotely
-
 ```
 connection.setRemoteDescription(new RTCSessionDescription());
 connection.addIceCandidate();
 ```
+
+### The Answer
+ - Recording it locally
+ - Recording it remotely
+ 
 ```
 connection.createAnswer(answer => {
 	console.log(JSON.stringify(answer));
