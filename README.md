@@ -1,15 +1,15 @@
 # Minimal WebRTC Messaging 
-## Setting Up
+### Setting Up
 We want to setup:
  - RTCPeerConnection
  - ICECandidate listener
  - DataChannel listener
 
-## The Offer
+### The Offer
  - Recording it locally
  - Recording it remotely
 
-## The Answer
+### The Answer
  - Recording it locally
  - Recording it remotely
 
