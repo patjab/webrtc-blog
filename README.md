@@ -19,7 +19,7 @@ connection = new RTCPeerConnection({
 		{
 			url: "turn:numb.viagenie.ca:3478",
 			username: "wireless.patrick@gmail.com",
-			credential:"zA9Tu3feUmb"
+			credential: "zA9Tu3feUmb"
 		}
 	]
 });
