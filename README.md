@@ -5,9 +5,12 @@ This markdown document lists the three parts needed for creating an RTCDataChann
  - RTCPeerConnection
  - ICECandidate listener
  - DataChannel listener
+ 
+ (without TURN: stun:stun.1.google.com:19302)
+ (with TURN: http://numb.viagenie.ca:3478)
 
 ```
-connection = new RTCPeerConnection({"iceServers": [{"url":"stun:stun.1.google.com:19302"}]});
+connection = new RTCPeerConnection({"iceServers": [{"url":"numb.viagenie.ca:3478"}]});
 
 connection.onicecandidate = (e) => {
 	if (e.candidate) {
