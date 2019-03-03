@@ -14,9 +14,9 @@ This markdown document lists the three parts needed for creating an RTCDataChann
 connection = new RTCPeerConnection({
 	"iceServers": [
 		{
-			url: "turn:numb.viagenie.ca:3478",
-			username: "wireless.patrick@gmail.com",
-			credential: "zA9Tu3feUmb"
+			"urls": ["turn:13.250.13.83:3478?transport=udp"],
+			"username": "YzYNCouZM1mhqhmseWk6",
+			"credential": "YzYNCouZM1mhqhmseWk6"
 		}
 	]
 });
