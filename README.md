@@ -7,7 +7,7 @@ This markdown document lists the three parts needed for creating an RTCDataChann
  - DataChannel listener
  
 ```
-connection = new RTCPeerConnection({ iceServers: ['stun:stun.1.google.com:19302'] });
+const connection = new RTCPeerConnection({ iceServers: [url: 'stun:stun.1.google.com:19302'] });
 
 connection.onicecandidate = (e) => {
 	if (e.candidate) {
@@ -16,7 +16,7 @@ connection.onicecandidate = (e) => {
 	}
 };
 
-eDataChannel = undefined;
+let eDataChannel = undefined;
 
 connection.ondatachannel = (e) => {
 	if (e.channel) {
@@ -25,7 +25,7 @@ connection.ondatachannel = (e) => {
 	}
 }
 
-dataChannel = connection.createDataChannel('myDataChannel', { reliable: true });
+const dataChannel = connection.createDataChannel('myDataChannel', { reliable: true });
 ```
 
 ### The Offer
