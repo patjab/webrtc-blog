@@ -16,8 +16,6 @@ connection.onicecandidate = (e) => {
 	}
 };
 
-let eDataChannel = undefined;
-
 connection.ondatachannel = (e) => {
 	if (e.channel) {
 		console.log('Data Channel now open');
