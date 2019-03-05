@@ -7,7 +7,7 @@ This markdown document lists the three parts needed for creating an RTCDataChann
  - DataChannel listener
  
 ```
-const connection = new RTCPeerConnection({ iceServers: [url: 'stun:stun.1.google.com:19302'] });
+const connection = new RTCPeerConnection({ iceServers: [{url: 'stun:stun.1.google.com:19302'}] });
 
 connection.onicecandidate = (e) => {
 	if (e.candidate) {
