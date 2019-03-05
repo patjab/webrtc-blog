@@ -56,4 +56,3 @@ connection.createAnswer(answer => {
 connection.setRemoteDescription(new RTCSessionDescription());
 connection.addIceCandidate();
 ```
-https://medium.com/@wireless.patrick/you-the-dumbest-dumb-dumbed-down-code-along-to-start-webrtc-ec66106d414b
