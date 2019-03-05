@@ -11,7 +11,7 @@ connection = new RTCPeerConnection({ iceServers: ['stun:stun.1.google.com:19302'
 
 connection.onicecandidate = (e) => {
 	if (e.candidate) {
-		console.log('adding', JSON.stringify(e.candidate));
+		console.log('CANDIDATE: ', JSON.stringify(e.candidate));
 		connection.addIceCandidate(e.candidate);
 	}
 };
@@ -20,7 +20,7 @@ eDataChannel = undefined;
 
 connection.ondatachannel = (e) => {
 	if (e.channel) {
-		console.log('found data channel');
+		console.log('Data Channel now open');
 		e.channel.onmessage = (e) => console.log(e.data);
 	}
 }
@@ -34,7 +34,7 @@ dataChannel = connection.createDataChannel('myDataChannel', { reliable: true });
 
 ```
 connection.createOffer(offer => {
-	console.log(JSON.stringify(offer));
+	console.log('OFFER: ', JSON.stringify(offer));
 	connection.setLocalDescription(offer);
 }, console.log);
 ```
@@ -50,7 +50,7 @@ connection.addIceCandidate();
  
 ```
 connection.createAnswer(answer => {
-	console.log(JSON.stringify(answer));
+	console.log('ANSWER: ', JSON.stringify(answer));
 	connection.setLocalDescription(answer);
 }, console.log);
 ```
